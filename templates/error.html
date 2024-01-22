@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh; /* 設定視窗高度的100%，使容器垂直居中 */
+            margin: 0; /* 清除預設的頁面邊距 */
+        }
+
+        .content {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20vh;
+        }
+
+        h2, h3, div {
+            text-align: center; /* 讓文字水平居中 */
+        }
+    </style>
+    <title>會員系統</title>
+</head>
+<body>
+    <div class="content">
+        <h2>會員系統首頁</h2>
+        <div>歡迎光臨我們的網站</div>
+        <h3>登入</h3>
+        <div>使用您的帳戶</div>
+        <form action="/myaccount">
+            <br/>
+            帳戶<input type="text" name="" />
+            <br/>
+            密碼<input type="text" name="" />
+            <h5>{{ msg }}</h5>
+            <br/>
+            <button>登入</button>
+        </form>
+        <br/>
+        <br/>
+        <form action="/signup">
+            <button>建立帳戶</button>
+        </form>
+    </div>
+</body>
+</html>
