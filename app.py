@@ -30,4 +30,4 @@ def error():
     msg=request.args.get("msg", "發生錯誤，請聯繫客服")
     return render_template("error.html", msg=msg)
 
-app.run(port=3000)
+app.run()
