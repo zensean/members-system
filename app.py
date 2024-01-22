@@ -11,7 +11,7 @@ app=Flask(
     static_folder="public",
     static_url_path="/"
 )
-app.secret_key=""
+app.secret_key="root0123"
 #處理路由
 @app.route("/")
 def home():
@@ -30,4 +30,5 @@ def error():
     msg=request.args.get("msg", "發生錯誤，請聯繫客服")
     return render_template("error.html", msg=msg)
 
-app.run()
+if __name__ == "__main__":
+    app.run()
