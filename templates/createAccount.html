@@ -14,7 +14,7 @@
         }
 
         .content {
-            height: 100vh;
+            height: 30vh; /* 設定.content的欄位高度百分比,控制與下方訊息欄位的距離 */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -28,25 +28,23 @@
             margin-top: 25px; /* 設定按鈕上方的外邊距 */
         }
     </style>
-    <title>會員系統</title>
+    <title>建立你的帳戶-基本資料</title>
 </head>
 <body>
     <div class="content">
-        <h2>會員系統首頁</h2>
-        <div>歡迎光臨我們的網站</div>
-        <h3>登入</h3>
-        <div>使用您的帳戶</div>
-        <form action="/signin" method="POST">
+        <h2>建立你的帳戶</h2>
+        <form action="/myAccountData" method="POST">
             <br/>
             電子信箱<input type="text" name="email" />
             <br/>
-            輸入密碼<input type="password" name="password" />
+            設定密碼<input type="password" name="password" />
             <br/>
-            <button>登入</button>
-        </form>
-        <form action="/createAccount">
-            <button>建立帳戶</button>
-        </form>
+            您的暱稱<input type="text" name="nickname" />
+            <br/>
+            手機號碼<input type="text" name="phoneNumber" />
+            <br/>
+            <br/>
+            <button>下一步</button>
     </div>
 </body>
 </html>

@@ -24,25 +24,30 @@
         h2, h3, div {
             text-align: center; /* 讓文字水平居中 */
         }
+        button {
+            margin-top: 25px; /* 設定按鈕上方的外邊距 */
+        }
     </style>
-    <title>建立你的帳戶</title>
+    <title>會員系統</title>
 </head>
 <body>
     <div class="content">
-        <h2>建立你的帳戶</h2>
-        <form action="/">
+        <h2>會員系統首頁</h2>
+        <div>歡迎光臨我們的網站</div>
+        <h3>登入</h3>
+        <div>使用您的帳戶</div>
+        <form action="/signin" method="POST">
             <br/>
-            設定帳戶<input type="text" name="" />
+            電子信箱<input type="text" name="email" />
             <br/>
-            設定密碼<input type="text" name="" />
+            輸入密碼<input type="password" name="password" />
             <br/>
-            手機號碼<input type="text" name="" />
-            <br/>
-            姓名<input type="text" name="" />
-            <br/>
-            性別<input type="text" name="" />
-            <br/>
+            <button>登入</button>
+        </form>
+        <form action="/createAccount">
             <button>建立帳戶</button>
+        </form>
+        <div><h5>{{ msg }}</h5></div>
     </div>
 </body>
 </html>
