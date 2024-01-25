@@ -27,14 +27,14 @@ def loginError():
     return render_template("loginError.html", msg=msg)
 
 # 會員頁面
-@app.route("/myAccount")
-def myAccount():
+@app.route("/myaccount")
+def myaccount():
     if "email" in session:
         # 從session中取得資訊
         email = session.get("email")
         nickname = session.get("nickname")
         # 傳遞資訊給HTML
-        return render_template("myAccount.html", email=email, nickname=nickname)
+        return render_template("myaccount.html", email=email, nickname=nickname)
     else:
         return redirect("/")
 
@@ -114,14 +114,14 @@ def signin():
     # 登入成功，在 Session 紀錄會員資訊，導向到會員頁面
     session["email"]=result["email"]
     session["nickname"]=result["nickname"]
-    return redirect("/myAccount")
+    return redirect("/myaccount")
 
-    # 登出
-    @app.route("/signout")
-    def signout():
-        del session["email"]
-        del session["nickname"]
-        return redirect("/")
+# 登出
+@app.route("/signout")
+def signout():
+    del session["email"]
+    del session["nickname"]
+    return redirect("/")
 
 def is_valid_email(email):
     # 檢查是否為有效的電子郵件格式
